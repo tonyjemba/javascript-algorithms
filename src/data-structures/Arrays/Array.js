@@ -35,27 +35,26 @@ class MadeArray{
      /**
       * 
       * @param {number} index -index of the element to delete
-      * @returns 
+      * @returns {any} -element that has been deleted
       */
      delete(index){
          const element_to_delete = this.elements[index];
          this.shiftElements(index);
          return element_to_delete;
      }
-
+     /**
+      * 
+      * @param {number} index -index of the element that we should start shifting from
+      */
      shiftElements(index){
+         //element in the position on index is overwrited and deleted
          for(let x = index; x < this.length-1; x++){
              this.elements[x] = this.elements[x+1];
          }
+         //delete the last element not to appear two times
          delete this.elements[this.length - 1];
+         
          this.length--;
      }
 }
 
-const mine = new MadeArray();
-mine.push("1");
-mine.push("2");
-mine.push("3");
-mine.push("4");
-
-console.log(mine);
