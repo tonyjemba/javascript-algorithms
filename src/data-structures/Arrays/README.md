@@ -17,3 +17,7 @@ Adding and removing elements at the beginning of the array has bigO of O(n) beca
 ###Deletion:
 Deleting elements from an array has bigO(n) because it has to loop through the rest of the array elements to change there indices.
 So arrays are good for access and adding elements at the end.
+
+## References
+
+- [Medium](https://medium.com/@tonyjemba/the-array-data-structure-in-javascript-6dbbe30c2138)
