@@ -23,7 +23,8 @@ export default class Queue {
 
   dequeue() {
     const removedHead = this.linkedList.deleteHead();
-    return removedHead ? removedHead.value : null;
+    if(removedHead){return removedHead.value;}
+    else{return null;}
   }
 
   toString(callback) {
